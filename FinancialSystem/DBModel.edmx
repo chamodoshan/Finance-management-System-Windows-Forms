@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FinancialDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="expense_and_income">
+          <Key>
+            <PropertyRef Name="expense_income_id" />
+          </Key>
+          <Property Name="expense_income_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="amount" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="reason" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="date" Type="date" Nullable="false" />
+          <Property Name="payee_or_payer_id" Type="int" Nullable="false" />
+          <Property Name="expense_or_income" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="payee_and_payer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="contact_number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="payment_method" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="person" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="user_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_expense_and_income_payee_and_payer">
+          <End Role="payee_and_payer" Type="Self.payee_and_payer" Multiplicity="1" />
+          <End Role="expense_and_income" Type="Self.expense_and_income" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="payee_and_payer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="expense_and_income">
+              <PropertyRef Name="payee_or_payer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FinancialDBModelStoreContainer">
+          <EntitySet Name="expense_and_income" EntityType="Self.expense_and_income" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="payee_and_payer" EntityType="Self.payee_and_payer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_expense_and_income_payee_and_payer" Association="Self.FK_expense_and_income_payee_and_payer">
+            <End Role="payee_and_payer" EntitySet="payee_and_payer" />
+            <End Role="expense_and_income" EntitySet="expense_and_income" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FinancialDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="expense_and_income">
+          <Key>
+            <PropertyRef Name="expense_income_id" />
+          </Key>
+          <Property Name="expense_income_id" Type="Int32" Nullable="false" />
+          <Property Name="amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="payee_or_payer_id" Type="Int32" Nullable="false" />
+          <Property Name="expense_or_income" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="payee_and_payer" Relationship="FinancialDBModel.FK_expense_and_income_payee_and_payer" FromRole="expense_and_income" ToRole="payee_and_payer" />
+        </EntityType>
+        <EntityType Name="payee_and_payer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="contact_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="payment_method" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="person" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="expense_and_income" Relationship="FinancialDBModel.FK_expense_and_income_payee_and_payer" FromRole="payee_and_payer" ToRole="expense_and_income" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="FinancialDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="expense_and_income" EntityType="Self.expense_and_income" />
+          <EntitySet Name="payee_and_payer" EntityType="Self.payee_and_payer" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <AssociationSet Name="FK_expense_and_income_payee_and_payer" Association="FinancialDBModel.FK_expense_and_income_payee_and_payer">
+            <End Role="payee_and_payer" EntitySet="payee_and_payer" />
+            <End Role="expense_and_income" EntitySet="expense_and_income" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="FK_expense_and_income_payee_and_payer">
+          <End Type="FinancialDBModel.payee_and_payer" Role="payee_and_payer" Multiplicity="1" />
+          <End Type="FinancialDBModel.expense_and_income" Role="expense_and_income" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="payee_and_payer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="expense_and_income">
+              <PropertyRef Name="payee_or_payer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FinancialDBModelStoreContainer" CdmEntityContainer="FinancialDBEntities">
+          <EntitySetMapping Name="expense_and_income">
+            <EntityTypeMapping TypeName="FinancialDBModel.expense_and_income">
+              <MappingFragment StoreEntitySet="expense_and_income">
+                <ScalarProperty Name="expense_income_id" ColumnName="expense_income_id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="payee_or_payer_id" ColumnName="payee_or_payer_id" />
+                <ScalarProperty Name="expense_or_income" ColumnName="expense_or_income" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="payee_and_payer">
+            <EntityTypeMapping TypeName="FinancialDBModel.payee_and_payer">
+              <MappingFragment StoreEntitySet="payee_and_payer">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+                <ScalarProperty Name="person" ColumnName="person" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="FinancialDBModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,45 @@
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\bin\Debug\FinancialSystem.exe.config
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\bin\Debug\FinancialSystem.exe
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\bin\Debug\FinancialSystem.pdb
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.csprojAssemblyReference.cache
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.Properties.Resources.resources
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.csproj.GenerateResource.cache
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.exe
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.pdb
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.PayeePayerDetailsView.resources
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.DisplayReportView.resources
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.PredictionView.resources
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.MenuView.resources
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.ViewPayeeAndPayer.resources
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\bin\Debug\MySql.Data.dll
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\bin\Debug\Google.Protobuf.dll
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\bin\Debug\MySql.Data.xml
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.csproj.CopyComplete
+C:\Users\User\source\repos\FinancialSystem\FinancialSystem\obj\Debug\FinancialSystem.ExpensesAndIncomeDeatilsView.resources
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\bin\Debug\FinancialSystem.exe.config
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\bin\Debug\FinancialSystem.exe
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\bin\Debug\FinancialSystem.pdb
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\bin\Debug\MySql.Data.dll
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\bin\Debug\Google.Protobuf.dll
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\bin\Debug\MySql.Data.xml
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.csprojAssemblyReference.cache
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.PayeePayerDetailsView.resources
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.ExpensesAndIncomeDeatilsView.resources
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.DisplayReportView.resources
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.PredictionView.resources
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.MenuView.resources
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.Properties.Resources.resources
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.ViewPayeeAndPayer.resources
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.csproj.GenerateResource.cache
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.csproj.CoreCompileInputs.cache
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.csproj.CopyComplete
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.exe
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.pdb
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\bin\Debug\EntityFramework.dll
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\bin\Debug\EntityFramework.SqlServer.dll
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\bin\Debug\EntityFramework.xml
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\bin\Debug\EntityFramework.SqlServer.xml
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.ViewExpenseAndIncome.resources
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.UserLoginView.resources
+D:\work\4th Year\Enterprise\Courseworks\FinancialSystem v0.3\FinancialSystem\obj\Debug\FinancialSystem.UserRegisterView.resources
